@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bird Hunt Game</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <style>
+    body {
+      background: linear-gradient(135deg, #f8fbff, #e9f4ff);
+      min-height: 100vh;
+    }
+    .hunt-card {
+      border: 0;
+      border-radius: 1rem;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    .info-line {
+      font-size: 1.05rem;
+      margin-bottom: 0.75rem;
+    }
+    .bird-board {
+      margin-top: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+    }
+    .bird-row {
+      display: flex;
+      gap: 0.65rem;
+      flex-wrap: nowrap;
+    }
+    .bird-cell {
+      width: 72px;
+      height: 72px;
+      border-radius: 0.55rem;
+      overflow: hidden;
+      border: 2px solid #d9e7f6;
+      background-color: #ffffff;
+      flex: 0 0 auto;
+    }
+    .bird-cell img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .image-legend {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: #39506b;
+    }
+    .image-legend code {
+      font-size: 0.8rem;
+    }
+    @media (max-width: 640px) {
+      .bird-cell {
+        width: 48px;
+        height: 48px;
+      }
+      .bird-row {
+        gap: 0.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-10 col-lg-8">
+        <div class="card hunt-card">
+          <div class="card-body p-4 p-md-5">
+            <h1 class="mb-4 text-primary">Jashwanth Reddy bird hunt</h1>
+
+            <p class="info-line">Click on the locations to find the birds, watch out for the forbidden statue</p>
+            <p class="info-line" id="locations">Number of locations checked is zero.</p>
+            <p class="info-line" id="score">Score is zero.</p>
+            <p class="info-line">Click for help.</p>
+            <p class="info-line" id="help">Help report</p>
+
+            <div class="bird-board" aria-label="5 by 7 search locations">
+              <div class="bird-row">
+                <div class="bird-cell"><img src="https://source.unsplash.com/200x200/?bush" alt="Bush location"></div>
+                <div class="bird-cell"><img src="https://source.unsplash.com/200x200/?bush" alt="Bush location"></div>
+                <div class="bird-cell"><img src="https://source.unsplash.com/200x200/?bush" alt="Bush location"></div>
+                <div class="bird-cell"><img src="https://source.unsplash.com/200x200/?bush" alt="Bush location"></div>
+                <div class="bird-cell"><img src="https://source.unsplash.com/200x200/?bush" alt="Bush location"></div>
+                <div class="bird-cell"><img src="https://source.unsplash.com/200x200/?bush" alt="Bush location"></div>
+                <div class="bird-cell"><img src="https://source.unsplash.com/200x200/?bush" alt="Bush location"></div>
+              </div>
+              <div class="bird-row">
+                <div class="bird-cell"><img src="https://source.unsplash.com/200x200/?bush" alt="Bush location"></div>
+                <div class="bird-cell"><img src="https://source.unsplash.com/200x200/?bush" alt="Bush location"></div>
+                <div class="bird-cell"><img src="https://source.unsplash.com/200x200/?bush" alt="Bush location"></div>
+                <div class="bird-cell"><img src="https://source.unsplash.com/200x200/?bush" alt="Bush location"></div>
+                <div class="bird-cell"><img src="https://source.unsplash.com/200x200/?bush" alt="Bush location"></div>
+                <div class="bird-cell"><img src="https://source.unsplash.com/200x200/?bush" alt="Bush location"></div>
+                <div class="bird-cell"><img src="https://source.unsplash.com/200x200/?bush" alt="Bush location"></div>
+              </div>
+              <div class="bird-row">
+                <div class="bird-cell"><img src="https://source.unsplash.com/200x200/?bush" alt="Bush location"></div>
+                <div class="bird-cell"><img src="https://source.unsplash.com/200x200/?bush" alt="Bush location"></div>
+                <div class="bird-cell"><img src="https://source.unsplash.com/200x200/?bush" alt="Bush location"></div>
+                <div class="bird-cell"><img src="https://source.unsplash.com/200x200/?bush" alt="Bush location"></div>
+                <div class="bird-cell"><img src="https://source.unsplash.com/200x200/?bush" alt="Bush location"></div>
+                <div class="bird-cell"><img src="https://source.unsplash.com/200x200/?bush" alt="Bush location"></div>
+                <div class="bird-cell"><img src="https://source.unsplash.com/200x200/?bush" alt="Bush location"></div>
+              </div>
+              <div class="bird-row">
+                <div class="bird-cell"><img src="https://source.unsplash.com/200x200/?bush" alt="Bush location"></div>
+                <div class="bird-cell"><img src="https://source.unsplash.com/200x200/?bush" alt="Bush location"></div>
+                <div class="bird-cell"><img src="https://source.unsplash.com/200x200/?bush" alt="Bush location"></div>
+                <div class="bird-cell"><img src="https://source.unsplash.com/200x200/?bush" alt="Bush location"></div>
+                <div class="bird-cell"><img src="https://source.unsplash.com/200x200/?bush" alt="Bush location"></div>
+                <div class="bird-cell"><img src="https://source.unsplash.com/200x200/?bush" alt="Bush location"></div>
+                <div class="bird-cell"><img src="https://source.unsplash.com/200x200/?bush" alt="Bush location"></div>
+              </div>
+              <div class="bird-row">
+                <div class="bird-cell"><img src="https://source.unsplash.com/200x200/?bush" alt="Bush location"></div>
+                <div class="bird-cell"><img src="https://source.unsplash.com/200x200/?bush" alt="Bush location"></div>
+                <div class="bird-cell"><img src="https://source.unsplash.com/200x200/?bush" alt="Bush location"></div>
+                <div class="bird-cell"><img src="https://source.unsplash.com/200x200/?bush" alt="Bush location"></div>
+                <div class="bird-cell"><img src="https://source.unsplash.com/200x200/?bush" alt="Bush location"></div>
+                <div class="bird-cell"><img src="https://source.unsplash.com/200x200/?bush" alt="Bush location"></div>
+                <div class="bird-cell"><img src="https://source.unsplash.com/200x200/?bush" alt="Bush location"></div>
+              </div>
+            </div>
+
+            <div class="image-legend">
+              <div>Image sources selected (close to square):</div>
+              <div><code>bush/tree:</code> https://source.unsplash.com/200x200/?bush</div>
+              <div><code>golden statue:</code> https://source.unsplash.com/200x200/?golden,statue</div>
+              <div><code>toucan:</code> https://source.unsplash.com/200x200/?toucan</div>
+              <div><code>lorikeet:</code> https://source.unsplash.com/200x200/?lorikeet</div>
+              <div><code>bunting:</code> https://source.unsplash.com/200x200/?bunting,bird</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
