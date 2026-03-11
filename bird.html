@@ -157,11 +157,30 @@
     let score = 0;
     let locationsVisited = 0;
     let lastLocation = 0;
-    const statueLocation = 19;
-    const toucanLocation = 14;
-    const lorikeetLocations = [3, 25];
-    const buntingLocations = [2, 5, 11, 20, 21];
+    let statueLocation = 19;
+    let toucanLocation = 14;
+    let lorikeetLocations = [3, 25];
+    let buntingLocations = [2, 5, 11, 20, 21];
     let gameOver = false;
+
+    function getRandomInt(max) {
+      return Math.floor(Math.random() * max);
+    }
+
+    function randomizeLocations() {
+      const positions = Array.from({ length: 35 }, (_, index) => index);
+      for (let i = positions.length - 1; i > 0; i -= 1) {
+        const swapIndex = getRandomInt(i + 1);
+        [positions[i], positions[swapIndex]] = [positions[swapIndex], positions[i]];
+      }
+
+      statueLocation = positions[0];
+      toucanLocation = positions[1];
+      lorikeetLocations = [positions[2], positions[3]];
+      buntingLocations = positions.slice(4, 9);
+    }
+
+    randomizeLocations();
 
     function updateStatus() {
       const locationsElement = document.getElementById("locations");
@@ -211,6 +230,8 @@
       locationsVisited += 1;
       updateStatus();
       lastLocation = position;
+
+      moveToucan();
     }
 
     function help() {
@@ -248,6 +269,28 @@
       const targetCol = target % 7;
 
       return Math.abs(originRow - targetRow) <= 1 && Math.abs(originCol - targetCol) <= 1;
+    }
+
+    function moveToucan() {
+      if (gameOver) {
+        return;
+      }
+
+      const row = Math.floor(toucanLocation / 7);
+      const col = toucanLocation % 7;
+      const options = [];
+
+      if (row > 0) options.push(toucanLocation - 7);
+      if (row < 4) options.push(toucanLocation + 7);
+      if (col > 0) options.push(toucanLocation - 1);
+      if (col < 6) options.push(toucanLocation + 1);
+
+      const nextIndex = options[getRandomInt(options.length)];
+      toucanLocation = nextIndex;
+
+      if (toucanLocation === lastLocation) {
+        gameOver = true;
+      }
     }
   </script>
 </body>
