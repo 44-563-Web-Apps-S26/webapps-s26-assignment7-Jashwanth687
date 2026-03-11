@@ -15,7 +15,7 @@
   <h2>Jashwanth Reddy reflexes</h2>
 
   <div id="target" class="mb-2">Your time</div>
-  <div id="counter" class="mb-3">Count</div>
+  <div id="countdown" class="mb-3">Count</div>
 
   <button type="button" id="goButton" class="btn btn-primary me-2">Go</button>
   <button type="button" id="haltButton" class="btn btn-danger">Halt</button>
@@ -29,6 +29,30 @@
     }
 
     document.getElementById("haltButton").onclick = recordTime;
+
+    function beginTime() {
+      for (let i = 0; i <= 5; i += 1) {
+        setTimeout(() => {
+          const countdownElement = document.getElementById("countdown");
+          countdownElement.innerHTML = i;
+        }, (5 - i) * 1000);
+      }
+
+      setTimeout(() => {
+        const targetElement = document.getElementById("target");
+
+        if (haltTime === undefined) {
+          targetElement.innerHTML = "Not soon enough";
+          return;
+        }
+
+        const targetTime = Date.now();
+        const elapsed = targetTime - haltTime;
+        targetElement.innerHTML = `Time was ${elapsed}`;
+      }, 5000);
+    }
+
+    document.getElementById("goButton").onclick = beginTime;
   </script>
 </body>
 </html>
