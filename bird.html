@@ -75,69 +75,180 @@
             <p class="info-line">Click on the locations to find the birds, watch out for the forbidden statue</p>
             <p class="info-line" id="locations">Number of locations checked is zero.</p>
             <p class="info-line" id="score">Score is zero.</p>
-            <p class="info-line">Click for help.</p>
+            <p class="info-line" id="helpButton" onclick="help()">Click for help.</p>
             <p class="info-line" id="help">Help report</p>
 
             <div class="bird-board" aria-label="5 by 7 search locations">
               <div class="bird-row">
-                <div class="bird-cell"><img src="https://source.unsplash.com/200x200/?bush" alt="Bush location"></div>
-                <div class="bird-cell"><img src="https://source.unsplash.com/200x200/?bush" alt="Bush location"></div>
-                <div class="bird-cell"><img src="https://source.unsplash.com/200x200/?bush" alt="Bush location"></div>
-                <div class="bird-cell"><img src="https://source.unsplash.com/200x200/?bush" alt="Bush location"></div>
-                <div class="bird-cell"><img src="https://source.unsplash.com/200x200/?bush" alt="Bush location"></div>
-                <div class="bird-cell"><img src="https://source.unsplash.com/200x200/?bush" alt="Bush location"></div>
-                <div class="bird-cell"><img src="https://source.unsplash.com/200x200/?bush" alt="Bush location"></div>
+                <div class="bird-cell"><img id="location-0" src="Bush.jpg" alt="Bush location" onclick="check(0)"></div>
+                <div class="bird-cell"><img id="location-1" src="Bush.jpg" alt="Bush location" onclick="check(1)"></div>
+                <div class="bird-cell"><img id="location-2" src="Bush.jpg" alt="Bush location" onclick="check(2)"></div>
+                <div class="bird-cell"><img id="location-3" src="Bush.jpg" alt="Bush location" onclick="check(3)"></div>
+                <div class="bird-cell"><img id="location-4" src="Bush.jpg" alt="Bush location" onclick="check(4)"></div>
+                <div class="bird-cell"><img id="location-5" src="Bush.jpg" alt="Bush location" onclick="check(5)"></div>
+                <div class="bird-cell"><img id="location-6" src="Bush.jpg" alt="Bush location" onclick="check(6)"></div>
               </div>
               <div class="bird-row">
-                <div class="bird-cell"><img src="https://source.unsplash.com/200x200/?bush" alt="Bush location"></div>
-                <div class="bird-cell"><img src="https://source.unsplash.com/200x200/?bush" alt="Bush location"></div>
-                <div class="bird-cell"><img src="https://source.unsplash.com/200x200/?bush" alt="Bush location"></div>
-                <div class="bird-cell"><img src="https://source.unsplash.com/200x200/?bush" alt="Bush location"></div>
-                <div class="bird-cell"><img src="https://source.unsplash.com/200x200/?bush" alt="Bush location"></div>
-                <div class="bird-cell"><img src="https://source.unsplash.com/200x200/?bush" alt="Bush location"></div>
-                <div class="bird-cell"><img src="https://source.unsplash.com/200x200/?bush" alt="Bush location"></div>
+                <div class="bird-cell"><img id="location-7" src="Bush.jpg" alt="Bush location" onclick="check(7)"></div>
+                <div class="bird-cell"><img id="location-8" src="Bush.jpg" alt="Bush location" onclick="check(8)"></div>
+                <div class="bird-cell"><img id="location-9" src="Bush.jpg" alt="Bush location" onclick="check(9)"></div>
+                <div class="bird-cell"><img id="location-10" src="Bush.jpg" alt="Bush location" onclick="check(10)"></div>
+                <div class="bird-cell"><img id="location-11" src="Bush.jpg" alt="Bush location" onclick="check(11)"></div>
+                <div class="bird-cell"><img id="location-12" src="Bush.jpg" alt="Bush location" onclick="check(12)"></div>
+                <div class="bird-cell"><img id="location-13" src="Bush.jpg" alt="Bush location" onclick="check(13)"></div>
               </div>
               <div class="bird-row">
-                <div class="bird-cell"><img src="https://source.unsplash.com/200x200/?bush" alt="Bush location"></div>
-                <div class="bird-cell"><img src="https://source.unsplash.com/200x200/?bush" alt="Bush location"></div>
-                <div class="bird-cell"><img src="https://source.unsplash.com/200x200/?bush" alt="Bush location"></div>
-                <div class="bird-cell"><img src="https://source.unsplash.com/200x200/?bush" alt="Bush location"></div>
-                <div class="bird-cell"><img src="https://source.unsplash.com/200x200/?bush" alt="Bush location"></div>
-                <div class="bird-cell"><img src="https://source.unsplash.com/200x200/?bush" alt="Bush location"></div>
-                <div class="bird-cell"><img src="https://source.unsplash.com/200x200/?bush" alt="Bush location"></div>
+                <div class="bird-cell"><img id="location-14" src="Bush.jpg" alt="Bush location" onclick="check(14)"></div>
+                <div class="bird-cell"><img id="location-15" src="Bush.jpg" alt="Bush location" onclick="check(15)"></div>
+                <div class="bird-cell"><img id="location-16" src="Bush.jpg" alt="Bush location" onclick="check(16)"></div>
+                <div class="bird-cell"><img id="location-17" src="Bush.jpg" alt="Bush location" onclick="check(17)"></div>
+                <div class="bird-cell"><img id="location-18" src="Bush.jpg" alt="Bush location" onclick="check(18)"></div>
+                <div class="bird-cell"><img id="location-19" src="Bush.jpg" alt="Bush location" onclick="check(19)"></div>
+                <div class="bird-cell"><img id="location-20" src="Bush.jpg" alt="Bush location" onclick="check(20)"></div>
               </div>
               <div class="bird-row">
-                <div class="bird-cell"><img src="https://source.unsplash.com/200x200/?bush" alt="Bush location"></div>
-                <div class="bird-cell"><img src="https://source.unsplash.com/200x200/?bush" alt="Bush location"></div>
-                <div class="bird-cell"><img src="https://source.unsplash.com/200x200/?bush" alt="Bush location"></div>
-                <div class="bird-cell"><img src="https://source.unsplash.com/200x200/?bush" alt="Bush location"></div>
-                <div class="bird-cell"><img src="https://source.unsplash.com/200x200/?bush" alt="Bush location"></div>
-                <div class="bird-cell"><img src="https://source.unsplash.com/200x200/?bush" alt="Bush location"></div>
-                <div class="bird-cell"><img src="https://source.unsplash.com/200x200/?bush" alt="Bush location"></div>
+                <div class="bird-cell"><img id="location-21" src="Bush.jpg" alt="Bush location" onclick="check(21)"></div>
+                <div class="bird-cell"><img id="location-22" src="Bush.jpg" alt="Bush location" onclick="check(22)"></div>
+                <div class="bird-cell"><img id="location-23" src="Bush.jpg" alt="Bush location" onclick="check(23)"></div>
+                <div class="bird-cell"><img id="location-24" src="Bush.jpg" alt="Bush location" onclick="check(24)"></div>
+                <div class="bird-cell"><img id="location-25" src="Bush.jpg" alt="Bush location" onclick="check(25)"></div>
+                <div class="bird-cell"><img id="location-26" src="Bush.jpg" alt="Bush location" onclick="check(26)"></div>
+                <div class="bird-cell"><img id="location-27" src="Bush.jpg" alt="Bush location" onclick="check(27)"></div>
               </div>
               <div class="bird-row">
-                <div class="bird-cell"><img src="https://source.unsplash.com/200x200/?bush" alt="Bush location"></div>
-                <div class="bird-cell"><img src="https://source.unsplash.com/200x200/?bush" alt="Bush location"></div>
-                <div class="bird-cell"><img src="https://source.unsplash.com/200x200/?bush" alt="Bush location"></div>
-                <div class="bird-cell"><img src="https://source.unsplash.com/200x200/?bush" alt="Bush location"></div>
-                <div class="bird-cell"><img src="https://source.unsplash.com/200x200/?bush" alt="Bush location"></div>
-                <div class="bird-cell"><img src="https://source.unsplash.com/200x200/?bush" alt="Bush location"></div>
-                <div class="bird-cell"><img src="https://source.unsplash.com/200x200/?bush" alt="Bush location"></div>
+                <div class="bird-cell"><img id="location-28" src="Bush.jpg" alt="Bush location" onclick="check(28)"></div>
+                <div class="bird-cell"><img id="location-29" src="Bush.jpg" alt="Bush location" onclick="check(29)"></div>
+                <div class="bird-cell"><img id="location-30" src="Bush.jpg" alt="Bush location" onclick="check(30)"></div>
+                <div class="bird-cell"><img id="location-31" src="Bush.jpg" alt="Bush location" onclick="check(31)"></div>
+                <div class="bird-cell"><img id="location-32" src="Bush.jpg" alt="Bush location" onclick="check(32)"></div>
+                <div class="bird-cell"><img id="location-33" src="Bush.jpg" alt="Bush location" onclick="check(33)"></div>
+                <div class="bird-cell"><img id="location-34" src="Bush.jpg" alt="Bush location" onclick="check(34)"></div>
               </div>
             </div>
 
             <div class="image-legend">
               <div>Image sources selected (close to square):</div>
-              <div><code>bush/tree:</code> https://source.unsplash.com/200x200/?bush</div>
-              <div><code>golden statue:</code> https://source.unsplash.com/200x200/?golden,statue</div>
-              <div><code>toucan:</code> https://source.unsplash.com/200x200/?toucan</div>
-              <div><code>lorikeet:</code> https://source.unsplash.com/200x200/?lorikeet</div>
-              <div><code>bunting:</code> https://source.unsplash.com/200x200/?bunting,bird</div>
+              <div><code>bush/tree:</code> Bush.jpg</div>
+              <div><code>golden statue:</code> Golden Statue.jpg</div>
+              <div><code>toucan:</code> Toucan.jpg</div>
+              <div><code>lorikeet:</code> Lorikeet.jpg</div>
+              <div><code>bunting:</code> Bunting.jpg</div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+  <script>
+    const ids = [
+      "location-0", "location-1", "location-2", "location-3", "location-4", "location-5", "location-6",
+      "location-7", "location-8", "location-9", "location-10", "location-11", "location-12", "location-13",
+      "location-14", "location-15", "location-16", "location-17", "location-18", "location-19", "location-20",
+      "location-21", "location-22", "location-23", "location-24", "location-25", "location-26", "location-27",
+      "location-28", "location-29", "location-30", "location-31", "location-32", "location-33", "location-34"
+    ];
+
+    const bushImage = "Bush.jpg";
+    const statueImage = "Golden Statue.jpg";
+    const toucanImage = "Toucan.jpg";
+    const lorikeetImage = "Lorikeet.jpg";
+    const buntingImage = "Bunting.jpg";
+
+    let score = 0;
+    let locationsVisited = 0;
+    let lastLocation = 0;
+    const statueLocation = 19;
+    const toucanLocation = 14;
+    const lorikeetLocations = [3, 25];
+    const buntingLocations = [2, 5, 11, 20, 21];
+    let gameOver = false;
+
+    function updateStatus() {
+      const locationsElement = document.getElementById("locations");
+      const scoreElement = document.getElementById("score");
+
+      locationsElement.textContent = `Number of locations checked is ${locationsVisited}.`;
+      scoreElement.textContent = `Score is ${score}.`;
+    }
+
+    function updateCellText(imgElement, label) {
+      imgElement.alt = label;
+      imgElement.title = label;
+    }
+
+    function revealAndLock(imgElement, src, label) {
+      imgElement.src = src;
+      updateCellText(imgElement, label);
+      imgElement.onclick = null;
+    }
+
+    function check(position) {
+      if (gameOver) {
+        return;
+      }
+
+      const locationId = ids[position];
+      const imgElement = document.getElementById(locationId);
+
+      if (position === statueLocation) {
+        revealAndLock(imgElement, statueImage, "Forbidden statue found");
+        score -= 3;
+        gameOver = true;
+      } else if (position === toucanLocation) {
+        revealAndLock(imgElement, toucanImage, "Toucan found");
+        score += 5;
+      } else if (lorikeetLocations.includes(position)) {
+        revealAndLock(imgElement, lorikeetImage, "Lorikeet found");
+        score += 3;
+      } else if (buntingLocations.includes(position)) {
+        revealAndLock(imgElement, buntingImage, "Bunting found");
+        score += 1;
+      } else {
+        imgElement.src = bushImage;
+        updateCellText(imgElement, "Bush location checked");
+      }
+
+      locationsVisited += 1;
+      updateStatus();
+      lastLocation = position;
+    }
+
+    function help() {
+      const message = getHelpMessage();
+      document.getElementById("help").textContent = message;
+    }
+
+    function getHelpMessage() {
+      const buntingNeighbors = [
+        (lastLocation + 1) % 35,
+        (lastLocation + 34) % 35,
+        (lastLocation + 7) % 35,
+        (lastLocation + 28) % 35
+      ];
+
+      if (buntingNeighbors.some((location) => buntingLocations.includes(location))) {
+        return "cheep";
+      }
+
+      if (isNeighboringWithoutWrap(lastLocation, toucanLocation)) {
+        return "caw";
+      }
+
+      if (isNeighboringWithoutWrap(lastLocation, statueLocation)) {
+        return "thrrum";
+      }
+
+      return "silence";
+    }
+
+    function isNeighboringWithoutWrap(origin, target) {
+      const originRow = Math.floor(origin / 7);
+      const originCol = origin % 7;
+      const targetRow = Math.floor(target / 7);
+      const targetCol = target % 7;
+
+      return Math.abs(originRow - targetRow) <= 1 && Math.abs(originCol - targetCol) <= 1;
+    }
+  </script>
 </body>
 </html>
